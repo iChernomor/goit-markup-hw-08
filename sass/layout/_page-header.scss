@@ -1,0 +1,44 @@
+.header-pages {
+  border-bottom: 1px solid #ececec;
+  &__siteheader {
+    display: flex;
+    align-items: center;
+  }
+
+  &__display {
+    display: flex;
+    align-items: center;
+  }
+  &__logo:hover,
+  &__logo:focus,
+  &__logo:active {
+    color: var(--accent-color);
+    outline: 0;
+    outline-offset: 0;
+    text-decoration: none;
+    transition: color var(--animation);
+  }
+  &__logoblu {
+    color: var(--accent-color);
+    font-family: "Raleway";
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    transition: color var(--animation);
+  }
+  &__logoblack {
+    color: #000000;
+    font-family: "Raleway";
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+  }
+  &__logowhite {
+    color: var(--white-color-text);
+    font-family: "Raleway";
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    transition: color var(--animation);
+  }
+}

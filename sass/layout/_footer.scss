@@ -1,0 +1,41 @@
+.footer {
+  background-color: #2f303a;
+  font-style: normal;
+  &__padding {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    display: flex;
+  }
+  &__itemtop {
+    margin-top: 20px;
+  }
+
+  &__item {
+    margin-top: 9px;
+  }
+
+  &__address {
+    font-style: normal;
+  }
+
+  &__contact {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+    line-height: 1.71;
+    text-decoration: none;
+    /* margin-bottom: 9px; */
+    transition: color var(--animation);
+  }
+  &__contact--white {
+    color: var(--white-color-text);
+    margin-right: 70px;
+  }
+  &__contact:hover,
+  &__contact:focus {
+    color: var(--accent-color);
+  }
+  &__address:hover,
+  &__address:focus {
+    color: var(--accent-color);
+  }
+}
