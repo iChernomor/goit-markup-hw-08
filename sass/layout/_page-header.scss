@@ -1,13 +1,22 @@
 .header-pages {
   border-bottom: 1px solid #ececec;
+  @media screen and (min-width: 480px) {
+  }
   &__siteheader {
-    display: flex;
-    align-items: center;
+    // display: flex;
+    @media screen and (min-width: 480px) {
+      position: relative;
+    }
   }
 
   &__display {
     display: flex;
     align-items: center;
+  }
+  &__logo {
+    @media screen and (min-width: 480px) {
+      padding: 16px 0;
+    }
   }
   &__logo:hover,
   &__logo:focus,
@@ -25,6 +34,10 @@
     font-size: 26px;
     line-height: 1.19;
     transition: color var(--animation);
+    @media screen and (min-width: 480px) {
+      font-size: 24px;
+      line-height: 1.16;
+    }
   }
   &__logoblack {
     color: #000000;
@@ -32,6 +45,10 @@
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
+    @media screen and (min-width: 480px) {
+      font-size: 24px;
+      line-height: 1.16;
+    }
   }
   &__logowhite {
     color: var(--white-color-text);
@@ -40,5 +57,25 @@
     font-size: 26px;
     line-height: 1.19;
     transition: color var(--animation);
+    @media screen and (min-width: 480px) {
+      font-size: 24px;
+      line-height: 1.16;
+    }
+  }
+  &__button {
+    display: inline-flex;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background-color: transparent;
+  }
+  &__button &__menu-close {
+    display: none;
+  }
+  &__button.is-open &__menu-close {
+    display: block;
+  }
+  &__button.is-open &__menu-open {
+    display: none;
   }
 }
