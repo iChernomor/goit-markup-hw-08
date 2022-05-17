@@ -1,11 +1,17 @@
 .footer {
   background-color: #2f303a;
   font-style: normal;
+  display: block;
   &__padding {
     padding-top: 60px;
     padding-bottom: 60px;
-    display: flex;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: space-between;
+    // flex-wrap: wrap;
+    // align-items: center;
   }
+
   &__itemtop {
     margin-top: 20px;
   }

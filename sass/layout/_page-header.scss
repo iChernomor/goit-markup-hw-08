@@ -1,11 +1,14 @@
 .header-pages {
   border-bottom: 1px solid #ececec;
+  position: relative;
+  z-index: 10;
+
   @media screen and (min-width: 480px) {
   }
   &__siteheader {
     // display: flex;
+
     @media screen and (min-width: 480px) {
-      position: relative;
     }
   }
 
