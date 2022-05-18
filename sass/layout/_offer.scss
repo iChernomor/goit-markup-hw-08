@@ -1,7 +1,7 @@
 .offer {
   background-color: #2f303a;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  // padding-top: 200px;
+  // padding-bottom: 200px;
   max-width: 1600px;
   background-position: center;
   background-size: cover;
@@ -13,44 +13,44 @@
       rgba(47, 48, 58, 0.4)
     ),
     url("../images/offer/1-mob1x.jpg");
-}
-@media screen and (min-device-pixel-ratio: 2),
-  screen and (min-resolution: 192dpi),
-  screen and (min-resolution: 2dppx) {
-  .offer {
-    background-image: linear-gradient(
-        to right,
-        rgba(47, 48, 58, 0.4),
-        rgba(47, 48, 58, 0.4)
-      ),
-      url("../images/offer/1-mob2x.jpg");
-  }
-}
-@media screen and (min-width: 481px) {
-  .offer {
-    background-image: linear-gradient(
-        to right,
-        rgba(47, 48, 58, 0.4),
-        rgba(47, 48, 58, 0.4)
-      ),
-      url("../images/offer/1-tab1x.jpg");
-  }
+
   @media screen and (min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),
     screen and (min-resolution: 2dppx) {
-    .offer {
+    & {
       background-image: linear-gradient(
           to right,
           rgba(47, 48, 58, 0.4),
           rgba(47, 48, 58, 0.4)
         ),
-        url("../images/offer/1-tab2x.jpg");
+        url("../images/offer/1-mob2x.jpg");
     }
   }
-
+  @media screen and (min-width: 481px) {
+    & {
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url("../images/offer/1-tab1x.jpg");
+    }
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      & {
+        background-image: linear-gradient(
+            to right,
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)
+          ),
+          url("../images/offer/1-tab2x.jpg");
+      }
+    }
+  }
   @media screen and (min-width: 769px) {
-    .offer {
-      height: 600px;
+    & {
+      // height: 600px;
       background-image: linear-gradient(
           to right,
           rgba(47, 48, 58, 0.4),
@@ -62,7 +62,7 @@
     @media screen and (min-device-pixel-ratio: 2),
       screen and (min-resolution: 192dpi),
       screen and (min-resolution: 2dppx) {
-      .offer {
+      & {
         background-image: linear-gradient(
             to right,
             rgba(47, 48, 58, 0.4),
@@ -72,9 +72,10 @@
       }
     }
   }
+
   &__title {
     color: var(--white-color-text);
-    width: 696px;
+    max-width: 360px;
     font-weight: 900;
     font-size: 26px;
     line-height: 1.6;
@@ -86,7 +87,7 @@
     @media screen and (min-width: 1200px) {
       font-size: 44px;
       line-height: 1.36;
-      // max-width: 696px;
+      max-width: 696px;
     }
   }
   & .container::before {
@@ -96,9 +97,9 @@
     background-repeat: no-repeat;
     background-position: center;
     background-color: #f5f4fa;
-    @media screen and (min-width: 480px) {
-      padding-top: 118px;
-    }
+  }
+  & .container {
+    padding-top: 118px;
 
     @media screen and (min-width: 769px) {
       padding-top: 200px;

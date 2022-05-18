@@ -10,12 +10,14 @@
   @media screen and (min-width: 768px) {
     flex-direction: row;
     flex-wrap: wrap;
-    width: calc((100% / 2) - 30px);
+    // width: calc((100% / 2) - 30px);
   }
   @media screen and (min-width: 1200px) {
-    width: calc((100% / 4) - 30px);
+    flex-direction: row;
+    flex-wrap: wrap;
+    // width: calc((100% / 6) - 30px);
   }
-  .team__section {
+  &__section {
     background-color: #f5f4fa;
   }
   &__title {

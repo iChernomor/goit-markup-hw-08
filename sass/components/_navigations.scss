@@ -9,7 +9,9 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  margin-bottom: 32px;
+
+  // margin-bottom: 32px;
+  background-color: aqua;
   z-index: 1;
   transform: translateY(-100%);
   &.is-open {
@@ -56,4 +58,7 @@
       transition: color var(--animation);
     }
   }
+}
+.margin-button {
+  margin-bottom: auto;
 }

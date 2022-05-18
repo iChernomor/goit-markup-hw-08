@@ -2,6 +2,7 @@
   background-color: #2f303a;
   font-style: normal;
   display: block;
+
   &__padding {
     padding-top: 60px;
     padding-bottom: 60px;
@@ -11,7 +12,11 @@
     // flex-wrap: wrap;
     // align-items: center;
   }
+  @media screen and (min-width: 768px) {
+  }
 
+  @media screen and (min-width: 1200px) {
+  }
   &__itemtop {
     margin-top: 20px;
   }
@@ -22,6 +27,7 @@
 
   &__address {
     font-style: normal;
+    // text-align: center;
   }
 
   &__contact {

@@ -109,12 +109,26 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 528px;
-  height: 581px;
+  width: 100%;
+  min-height: 609px;
   background-color: #ffffff;
   transition: transform var(--animation);
   z-index: 3;
   padding: 40px;
+}
+
+@media screen and (min-width: 480px) {
+  .backdrop__modal {
+    width: 450px;
+    height: 609px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .backdrop__modal {
+    width: 528px;
+    height: 581px;
+  }
 }
 
 .backdrop__title {
@@ -244,9 +258,6 @@ img {
 }
 
 .form__agreement {
-  font-family: "Roboto";
-  font-weight: 400;
-  font-size: 14px;
   letter-spacing: 0.03em;
   line-height: 1.71;
   display: flex;
@@ -257,7 +268,14 @@ img {
 .form a {
   color: var(--accent-color);
   text-decoration-line: underline;
-  margin-left: 14px;
+  margin-left: 12px;
+}
+
+@media screen and (min-width: 1200px) {
+  .form a {
+    font-size: 14px;
+    line-height: 1.7;
+  }
 }
 
 .form__checkbox {
@@ -325,7 +343,7 @@ img {
   left: 0;
   width: 100vw;
   height: 100vh;
-  margin-bottom: 32px;
+  background-color: aqua;
   z-index: 1;
   transform: translateY(-100%);
 }
@@ -374,6 +392,10 @@ img {
   outline-offset: 0;
   text-decoration: none;
   transition: color var(--animation);
+}
+
+.margin-button {
+  margin-bottom: auto;
 }
 
 .advantage {
@@ -793,7 +815,7 @@ img {
 
 @media screen and (min-width: 768px) {
   .foto__nopadding {
-    display: flex;
+    display: none;
   }
 }
 
@@ -805,8 +827,6 @@ img {
 
 .offer {
   background-color: #2f303a;
-  padding-top: 200px;
-  padding-bottom: 200px;
   max-width: 1600px;
   background-position: center;
   background-size: cover;
@@ -833,91 +853,84 @@ img {
   }
 }
 
-@media screen and (min-width: 481px) and (min-width: 769px) {
+@media screen and (min-width: 769px) {
   .offer {
-    height: 600px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/offer/1-desk1x.jpg");
   }
 }
 
-@media screen and (min-width: 481px) and (min-width: 769px) and (min-device-pixel-ratio: 2), screen and (min-width: 481px) and (min-width: 769px) and (min-resolution: 192dpi), screen and (min-width: 481px) and (min-width: 769px) and (min-resolution: 2dppx) {
+@media screen and (min-width: 769px) and (min-device-pixel-ratio: 2), screen and (min-width: 769px) and (min-resolution: 192dpi), screen and (min-width: 769px) and (min-resolution: 2dppx) {
   .offer {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/offer/1-desk2x.jpg");
   }
 }
 
-@media screen and (min-width: 481px) {
-  __title {
-    color: var(--white-color-text);
-    width: 696px;
-    font-weight: 900;
-    font-size: 26px;
-    line-height: 1.6;
-    text-align: center;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    margin: 0 auto;
-    margin-bottom: 30px;
-  }
+.offer__title {
+  color: var(--white-color-text);
+  max-width: 360px;
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.6;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin: 0 auto;
+  margin-bottom: 30px;
 }
 
-@media screen and (min-width: 481px) and (min-width: 1200px) {
-  __title {
+@media screen and (min-width: 1200px) {
+  .offer__title {
     font-size: 44px;
     line-height: 1.36;
+    max-width: 696px;
   }
 }
 
-@media screen and (min-width: 481px) {
-  .container::before {
-    display: block;
-    content: "";
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: #f5f4fa;
-  }
+.offer .container::before {
+  display: block;
+  content: "";
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #f5f4fa;
 }
 
-@media screen and (min-width: 481px) and (min-width: 480px) {
-  .container::before {
-    padding-top: 118px;
-  }
+.offer .container {
+  padding-top: 118px;
 }
 
-@media screen and (min-width: 481px) and (min-width: 769px) {
-  .container::before {
+@media screen and (min-width: 769px) {
+  .offer .container {
     padding-top: 200px;
   }
 }
 
-@media screen and (min-width: 481px) {
-  __button {
-    color: var(--white-color-text);
-    background-color: var(--accent-color);
-    margin: 0 auto;
-    display: block;
-    font-family: "Roboto";
-    padding: 10px 32px;
-    border-radius: 4px;
-    min-width: 200px;
-    border: transparent;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 0.06em;
-    cursor: pointer;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-    transition: background-color var(--animation), color var(--animation);
-  }
-  __button:hover, __button:focus {
-    background-color: var(--white-color-text);
-    color: var(--accent-color);
-  }
+.offer__button {
+  color: var(--white-color-text);
+  background-color: var(--accent-color);
+  margin: 0 auto;
+  display: block;
+  font-family: "Roboto";
+  padding: 10px 32px;
+  border-radius: 4px;
+  min-width: 200px;
+  border: transparent;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  transition: background-color var(--animation), color var(--animation);
+}
+
+.offer__button:hover, .offer__button:focus {
+  background-color: var(--white-color-text);
+  color: var(--accent-color);
 }
 
 .header-pages {
@@ -1210,7 +1223,6 @@ img {
   padding-top: 10px;
   padding-bottom: 10px;
   margin-left: 12px;
-  display: flex;
   align-items: center;
   justify-content: center;
   /* text-align: center; */
@@ -1314,15 +1326,19 @@ img {
   font-size: 18px;
   line-height: 1.22px;
   letter-spacing: 0.02em;
-  color: var(--accent-color);
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 64px;
 }
 
 .network__item {
   color: var(--accent-color);
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.network__item:not(:last-child) {
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
 .team {
@@ -1337,17 +1353,17 @@ img {
   .team {
     flex-direction: row;
     flex-wrap: wrap;
-    width: calc((100% / 2) - 30px);
   }
 }
 
 @media screen and (min-width: 1200px) {
   .team {
-    width: calc((100% / 4) - 30px);
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 
-.team .team__section {
+.team__section {
   background-color: #f5f4fa;
 }
 
