@@ -1,12 +1,27 @@
 .card {
   display: flex;
   flex-wrap: wrap;
+  @media screen and (min-width: 480px) {
+    flex-direction: column;
+  }
+  @media screen and (min-width: 768px) {
+    // flex-direction: row;
+    width: calc((100% / 2) - 30px);
+  }
   &__list {
     width: 370px;
     margin-right: 30px;
     margin-bottom: 30px;
     cursor: pointer;
     transition: box-shadow var(--animation);
+    flex-basis: calc((100% - 2 * 15px) / 1);
+
+    @media screen and (min-width: 768px) {
+      flex-basis: calc((100% - 4 * 15px) / 2);
+    }
+    @media screen and (min-width: 1200px) {
+      flex-basis: calc((100% - 6 * 15px) / 3);
+    }
   }
 
   &__link {
@@ -71,6 +86,12 @@
     padding: 63px 24px;
     transform: translateY(105%);
     transition: transform var(--animation);
+    @media screen and (min-width: 768px) {
+      padding-top: 49px;
+    }
+    @media screen and (min-width: 1200px) {
+      padding-top: 63px;
+    }
   }
 
   &__list:hover &__overlay {

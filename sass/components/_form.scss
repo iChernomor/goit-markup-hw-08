@@ -26,15 +26,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* padding: 0; */
+
     color: #000000;
     transition: color var(--animation);
-    @media screen and (min-width: 480px) {
-    }
-    @media screen and (min-width: 768px) {
-    }
-    @media screen and (min-width: 1200px) {
-    }
   }
 
   &__close:hover,
@@ -53,12 +47,7 @@
     margin-bottom: 10px;
     background: #ffffff;
     border-radius: 4px;
-    @media screen and (min-width: 480px) {
-    }
-    @media screen and (min-width: 768px) {
-    }
-    @media screen and (min-width: 1200px) {
-    }
+
   }
   &__input {
     margin: 0;
@@ -71,12 +60,7 @@
     cursor: pointer;
     height: 40px;
     outline: none;
-    @media screen and (min-width: 480px) {
-    }
-    @media screen and (min-width: 768px) {
-    }
-    @media screen and (min-width: 1200px) {
-    }
+
   }
   &__input::placeholder {
     color: rgba(117, 117, 117, 0.5);
@@ -103,12 +87,7 @@
     top: 50%;
     left: 12px;
     cursor: pointer;
-    @media screen and (min-width: 480px) {
-    }
-    @media screen and (min-width: 768px) {
-    }
-    @media screen and (min-width: 1200px) {
-    }
+
   }
   &__field:focus-within > &__icon + &__iconname {
     color: var(--accent-color);
@@ -126,21 +105,11 @@
     box-sizing: border-box;
     border-radius: 4px;
     resize: none;
-    @media screen and (min-width: 480px) {
-    }
-    @media screen and (min-width: 768px) {
-    }
-    @media screen and (min-width: 1200px) {
-    }
+ 
   }
   &__textarea::placeholder {
     color: rgba(117, 117, 117, 0.5);
-    @media screen and (min-width: 480px) {
-    }
-    @media screen and (min-width: 768px) {
-    }
-    @media screen and (min-width: 1200px) {
-    }
+ 
   }
   &__agreement {
     font-family: "Roboto";
@@ -151,35 +120,20 @@
     display: flex;
     align-items: center;
     margin-top: 20px;
-    @media screen and (min-width: 480px) {
-    }
-    @media screen and (min-width: 768px) {
-    }
-    @media screen and (min-width: 1200px) {
-    }
+
   }
   a {
     color: var(--accent-color);
     text-decoration-line: underline;
     margin-left: 14px;
-    @media screen and (min-width: 480px) {
-    }
-    @media screen and (min-width: 768px) {
-    }
-    @media screen and (min-width: 1200px) {
-    }
+
   }
   &__checkbox {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     position: absolute;
-    @media screen and (min-width: 480px) {
-    }
-    @media screen and (min-width: 768px) {
-    }
-    @media screen and (min-width: 1200px) {
-    }
+ 
   }
   &__checkicon {
     content: "";
@@ -190,12 +144,7 @@
     border: 2px solid var(--primary-text-color);
     border-radius: 4px;
     margin-right: 8px;
-    @media screen and (min-width: 480px) {
-    }
-    @media screen and (min-width: 768px) {
-    }
-    @media screen and (min-width: 1200px) {
-    }
+
   }
   &__checkbox:checked + &__checkicon {
     border-color: var(--accent-color);
@@ -203,12 +152,7 @@
     background-image: url(../images/iconcheck.svg);
     background-size: contain;
     background-origin: content-box;
-    @media screen and (min-width: 480px) {
-    }
-    @media screen and (min-width: 768px) {
-    }
-    @media screen and (min-width: 1200px) {
-    }
+  
   }
   &__button {
     color: var(--white-color-text);
@@ -232,12 +176,7 @@
     border-radius: 4px;
     transition: background-color var(--animation), color var(--animation);
     margin-top: 30px;
-    @media screen and (min-width: 480px) {
-    }
-    @media screen and (min-width: 768px) {
-    }
-    @media screen and (min-width: 1200px) {
-    }
+ 
   }
   &__button:hover,
   &__button:focus {

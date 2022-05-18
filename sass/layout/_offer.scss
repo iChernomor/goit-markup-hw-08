@@ -12,18 +12,82 @@
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url("../images/header.jpg");
+    url("../images/offer/1-mob1x.jpg");
+}
+@media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  .offer {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/offer/1-mob2x.jpg");
+  }
+}
+@media screen and (min-width: 481px) {
+  .offer {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/offer/1-tab1x.jpg");
+  }
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    .offer {
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url("../images/offer/1-tab2x.jpg");
+    }
+  }
+
+  @media screen and (min-width: 769px) {
+    .offer {
+      height: 600px;
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url("../images/offer/1-desk1x.jpg");
+    }
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      .offer {
+        background-image: linear-gradient(
+            to right,
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)
+          ),
+          url("../images/offer/1-desk2x.jpg");
+      }
+    }
+  }
   &__title {
     color: var(--white-color-text);
     width: 696px;
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+    font-size: 26px;
+    line-height: 1.6;
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     margin: 0 auto;
     margin-bottom: 30px;
+    @media screen and (min-width: 1200px) {
+      font-size: 44px;
+      line-height: 1.36;
+      // max-width: 696px;
+    }
   }
   & .container::before {
     display: block;
@@ -32,6 +96,13 @@
     background-repeat: no-repeat;
     background-position: center;
     background-color: #f5f4fa;
+    @media screen and (min-width: 480px) {
+      padding-top: 118px;
+    }
+
+    @media screen and (min-width: 769px) {
+      padding-top: 200px;
+    }
   }
   &__button {
     color: var(--white-color-text);
@@ -54,11 +125,10 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     transition: background-color var(--animation), color var(--animation);
-  }
-
-  &__button:hover,
-  &__button:focus {
-    background-color: var(--white-color-text);
-    color: var(--accent-color);
+    &:hover,
+    &:focus {
+      background-color: var(--white-color-text);
+      color: var(--accent-color);
+    }
   }
 }

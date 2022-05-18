@@ -5,20 +5,18 @@
 
   @media screen and (min-width: 480px) {
   }
-  &__siteheader {
-    // display: flex;
-
-    @media screen and (min-width: 480px) {
-    }
-  }
+  // &__siteheader {
+  // }
 
   &__display {
     display: flex;
     align-items: center;
+    justify-content: space-between;
   }
   &__logo {
+    padding: 16px 0;
+    cursor: pointer;
     @media screen and (min-width: 480px) {
-      padding: 16px 0;
     }
   }
   &__logo:hover,
@@ -48,6 +46,7 @@
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
+    cursor: pointer;
     @media screen and (min-width: 480px) {
       font-size: 24px;
       line-height: 1.16;
@@ -80,5 +79,11 @@
   }
   &__button.is-open &__menu-open {
     display: none;
+  }
+  &__button.is-open &__button-icon {
+    position: fixed;
+    top: 8px;
+    left: 8px;
+    z-index: 10;
   }
 }

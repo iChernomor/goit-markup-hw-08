@@ -1,9 +1,6 @@
 .foto {
   display: flex;
   justify-content: space-between;
-  @media screen and (min-width: 480px) {
-    display: none;
-  }
 
   &__h2 {
     color: var(--primary-text-color);
@@ -34,14 +31,20 @@
     margin-right: 30px;
     position: relative;
     @media screen and (min-width: 480px) {
-      display: none;
     }
   }
   &__nopadding {
     padding-top: 0px;
     display: flex;
-    @media screen and (min-width: 480px) {
+
+    @media screen and (max-width: 767px) {
       display: none;
+    }
+    @media screen and (min-width: 768px) {
+      display: flex;
+    }
+    @media screen and (min-width: 1200px) {
+      display: flex;
     }
   }
 }

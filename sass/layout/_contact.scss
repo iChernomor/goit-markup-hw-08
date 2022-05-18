@@ -5,7 +5,6 @@
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
-  display: flex;
 
   & :hover,
 /*подсветка при наведении*/
@@ -16,12 +15,15 @@
     transition: color var(--animation);
   }
   .site-contact__item + .site-contact__item {
-    margin-left: 50px;
     display: block;
+
+    @media screen and (min-width: 1200px) {
+      margin-left: 50px;
+    }
   }
   &__link {
-    display: flex;
-    align-items: center;
+    // display: flex;
+    // align-items: center;
     transition: color var(--animation);
   }
   &__link:hover,
