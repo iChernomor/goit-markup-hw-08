@@ -101,7 +101,7 @@ img {
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
   transition: opacity var(--animation);
-  z-index: 2;
+  z-index: 12;
 }
 
 .backdrop__modal {
@@ -268,7 +268,6 @@ img {
 .form a {
   color: var(--accent-color);
   text-decoration-line: underline;
-  margin-left: 12px;
 }
 
 @media screen and (min-width: 1200px) {
@@ -331,6 +330,21 @@ img {
 .form__button:hover, .form__button:focus {
   background-color: var(--accent-color);
   color: var(--accent-color);
+}
+
+.form__policy {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+  margin-left: 8px;
+}
+
+@media screen and (min-width: 1200px) {
+  .form__policy {
+    font-size: 14px;
+    line-height: 1.7;
+  }
 }
 
 .site-nav {
@@ -412,7 +426,7 @@ img {
     position: absolute;
     margin-bottom: -30px;
     left: 0;
-    bottom: -1px;
+    bottom: -3px;
     content: "";
     display: block;
     width: 100%;
@@ -1061,7 +1075,6 @@ img {
 .header-pages {
   border-bottom: 1px solid #ececec;
   position: relative;
-  z-index: 10;
 }
 
 .header-pages__display {

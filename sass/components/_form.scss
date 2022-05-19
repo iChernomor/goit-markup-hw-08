@@ -116,7 +116,7 @@
   a {
     color: var(--accent-color);
     text-decoration-line: underline;
-    margin-left: 12px;
+    // margin-left: 12px;
     @media screen and (min-width: 1200px) {
       font-size: 14px;
       line-height: 1.7;
@@ -172,5 +172,17 @@
   &__button:focus {
     background-color: var(--accent-color);
     color: var(--accent-color);
+  }
+}
+.form__policy {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+  margin-left: 8px;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.7;
   }
 }
