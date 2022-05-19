@@ -23,11 +23,12 @@
     &:not(:last-child)::after {
       position: absolute;
       content: "";
-      display: block;
+
       right: -10px;
       bottom: 0;
       height: 22px;
       width: 1px;
+      display: block;
       background-color: rgba(33, 33, 33, 0.2);
     }
     & a:visited {

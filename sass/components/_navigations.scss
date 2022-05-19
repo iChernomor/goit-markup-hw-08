@@ -52,8 +52,11 @@
     line-height: 1.17;
     letter-spacing: 0.02em;
     text-decoration: none;
+
+    // додати в медіа від таблетки стилі флекс і т.д.
   }
   &__textblack {
+    // в медіа для мобільних екранів
     font-weight: 500;
     font-size: 40px;
     line-height: 1.17;
@@ -84,6 +87,5 @@
       text-decoration: none;
       transition: color var(--animation);
     }
-    
   }
 }

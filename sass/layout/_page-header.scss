@@ -76,6 +76,8 @@
     &:focus {
       fill: var(--accent-color);
     }
+
+    // додати медіа для табл щоб заховати елемент
   }
   &__button &__menu-close {
     display: none;

@@ -71,6 +71,13 @@
           url("../images/offer/1-desk2x.jpg");
       }
     }
+    @media screen and (max-width: 768px) {
+      padding-top: 118px;
+
+      @media screen and (min-width: 769px) {
+        padding-top: 200px;
+      }
+    }
   }
 
   &__title {
@@ -98,13 +105,7 @@
     background-position: center;
     background-color: #f5f4fa;
   }
-  & .container {
-    padding-top: 118px;
 
-    @media screen and (min-width: 769px) {
-      padding-top: 200px;
-    }
-  }
   &__button {
     color: var(--white-color-text);
     background-color: var(--accent-color);
