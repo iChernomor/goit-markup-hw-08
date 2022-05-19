@@ -1,6 +1,7 @@
 .offer {
   background-color: #2f303a;
   max-width: 1600px;
+  height: 400px;
   background-position: center;
   background-size: cover;
   margin-left: auto;
@@ -70,7 +71,6 @@
     }
     @media screen and (max-width: 768px) {
       padding-top: 118px;
-      padding-bottom: 118px;
     }
     @media screen and (min-width: 769px) {
       padding-top: 200px;
