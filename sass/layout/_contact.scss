@@ -16,19 +16,28 @@
     transition: color var(--animation);
 
     @media screen and (max-width: 767px) {
+      margin-bottom: 64px;
+    }
+
+    @media screen and (min-width: 768px) {
       display: flex;
       flex-direction: column-reverse;
+      margin-left: auto;
     }
-  }
-  .site-contact__item + .site-contact__item {
-    display: block;
 
     @media screen and (min-width: 1200px) {
-      margin-left: 50px;
+      flex-direction: row-reverse;
     }
   }
+  // .site-contact__item + .site-contact__item {
+  //   display: block;
+
+  //   @media screen and (min-width: 1200px) {
+  //     margin-left: 50px;
+  //   }
+  // }
   &__item {
-    // position: relative;
+    position: relative;
     @media screen and (max-width: 767px) {
       display: flex;
       flex-direction: column-reverse;
@@ -45,7 +54,7 @@
   &__link {
     font-weight: 500;
     letter-spacing: 0.02em;
-    color: #212121;
+    color: var(--secondary-text-color);
     // display: flex;
     // align-items: center;
     transition: color var(--animation);
@@ -54,14 +63,7 @@
       color: var(--accent-color);
       transition: color var(--animation);
     }
-    &__link--tel {
-      @media screen and (max-width: 767px) {
-        font-size: 34px;
-        line-height: 1.18;
-        letter-spacing: 0.02em;
-        color: var(--accent-color);
-      }
-    }
+
     @media screen and (max-width: 767px) {
       position: relative;
       display: block;
@@ -74,7 +76,7 @@
       line-height: 1.14;
       padding-top: 32px;
       padding-bottom: 32px;
-      display: inline-flex;
+      // display: inline-flex;
       transition: color var(--animation), outline-color var(--animation);
     }
     &--tel {
@@ -83,10 +85,11 @@
         line-height: 1.18;
         letter-spacing: 0.02em;
         color: var(--accent-color);
+        margin-bottom: 10px;
       }
     }
   }
-  &__link--mail {
+  &--mail {
     @media screen and (max-width: 767px) {
       font-size: 24px;
       line-height: 1.17;
