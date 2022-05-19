@@ -10,7 +10,9 @@
   &__logo {
     // padding: 16px 0;
     cursor: pointer;
-    @media screen and (min-width: 480px) {
+    @media screen and (max-width: 479px) {
+      padding-top: 16px;
+      padding-bottom: 16px;
     }
   }
   &__logo:hover,
@@ -78,8 +80,6 @@
     &:focus {
       fill: var(--accent-color);
     }
-
-    // додати медіа для табл щоб заховати елемент
   }
   &__button &__menu-close {
     display: none;
@@ -91,7 +91,6 @@
     display: none;
   }
   &__button.is-open &__button-icon {
-    // position: fixed;
     top: 10px;
     left: 15px;
     z-index: 10;
