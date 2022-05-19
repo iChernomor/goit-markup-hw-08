@@ -577,7 +577,8 @@ img {
 .card {
   display: flex;
   flex-wrap: wrap;
-  margin-left: -15px;
+  margin-left: -30px;
+  margin-top: -30px;
   /* Розрахунок ширини блока в % */
   /* ширина контейнера = 100% - зазор 30рх (при 2 колонках, при 3=60рх і т.д.) / 3 */
   /* &-list {
@@ -592,7 +593,9 @@ img {
 }
 
 .card__list {
-  margin-left: 15px;
+  width: 370px;
+  margin-left: 30px;
+  margin-top: 30px;
   flex-basis: calc((100% - 2 * 15px) / 1);
 }
 
@@ -1005,14 +1008,16 @@ img {
 }
 
 .offer {
-  background-color: #2f303a;
   max-width: 1600px;
   height: 400px;
-  background-position: center;
-  background-size: cover;
-  margin-left: auto;
-  margin-right: auto;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/offer/1-mob1x.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 auto;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 @media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
@@ -1035,38 +1040,38 @@ img {
 
 @media screen and (min-width: 769px) {
   .offer {
+    height: 600px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/offer/1-desk1x.jpg");
   }
 }
 
-@media screen and (min-width: 769px) and (min-device-pixel-ratio: 2), screen and (min-width: 769px) and (min-resolution: 192dpi), screen and (min-width: 769px) and (min-resolution: 2dppx) {
+@media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
   .offer {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/offer/1-desk2x.jpg");
   }
 }
 
-@media screen and (min-width: 769px) and (max-width: 768px) {
-  .offer {
-    padding-top: 118px;
-  }
+.offer__container {
+  padding-top: 118px;
 }
 
-@media screen and (min-width: 769px) and (min-width: 769px) {
-  .offer {
+@media screen and (min-width: 769px) {
+  .offer__container {
     padding-top: 200px;
   }
 }
 
 .offer__title {
-  color: var(--white-color-text);
   max-width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #ffffff;
   font-weight: 900;
   font-size: 26px;
   line-height: 1.6;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  margin: 0 auto;
   margin-bottom: 30px;
 }
 
@@ -1078,41 +1083,30 @@ img {
   }
 }
 
-.offer .container::before {
-  display: block;
-  content: "";
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: #f5f4fa;
-}
-
 .offer__button {
-  color: var(--white-color-text);
-  background-color: var(--accent-color);
-  margin: 0 auto;
   display: block;
-  font-family: "Roboto";
-  padding: 10px 32px;
-  border-radius: 4px;
   min-width: 200px;
-  border: transparent;
+  min-height: 50px;
+  padding: 10px;
   font-weight: 700;
   font-size: 16px;
-  line-height: 1.88;
-  display: flex;
+  line-height: 30px;
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
-  cursor: pointer;
+  color: #ffffff;
+  background-color: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  transition: background-color var(--animation), color var(--animation);
+  border: none;
+  padding: 10px 32px;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: background-color var(--animation);
 }
 
 .offer__button:hover, .offer__button:focus {
-  background-color: var(--white-color-text);
-  color: var(--accent-color);
+  background-color: #188ce8;
 }
 
 .header-pages {
@@ -1251,6 +1245,8 @@ img {
     margin-bottom: 30px;
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -1399,6 +1395,8 @@ img {
 .social__link {
   width: 100%;
   height: 100%;
+  align-items: center;
+  justify-content: center;
   display: flex;
   border-radius: 22px;
   fill: #afb1b8;
