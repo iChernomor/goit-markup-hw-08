@@ -1,9 +1,9 @@
 .network {
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 1.22px;
-  letter-spacing: 0.02em;
-  color: var(--accent-color);
+  // font-weight: 500;
+  // font-size: 18px;
+  // line-height: 1.22px;
+  // letter-spacing: 0.02em;
+  // color: var(--accent-color);
   display: flex;
   flex-wrap: wrap;
   // justify-content: center;
@@ -27,7 +27,7 @@
       content: "";
 
       right: -10px;
-      bottom: -10px;
+      bottom: 0;
       height: 22px;
       width: 1px;
       display: block;
@@ -35,6 +35,10 @@
     }
   }
   &__link {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22px;
+    letter-spacing: 0.02em;
     color: var(--accent-color);
   }
 }
