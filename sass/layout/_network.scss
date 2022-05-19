@@ -15,7 +15,9 @@
   }
 
   &__item {
+    height: 100%;
     position: relative;
+    color: var(--accent-color);
 
     &:not(:last-child) {
       margin-right: 20px;
@@ -25,14 +27,14 @@
       content: "";
 
       right: -10px;
-      bottom: 0;
+      bottom: -10px;
       height: 22px;
       width: 1px;
       display: block;
       background-color: rgba(33, 33, 33, 0.2);
     }
-    & a:visited {
-      color: var(--accent-color);
-    }
+  }
+  &__link {
+    color: var(--accent-color);
   }
 }

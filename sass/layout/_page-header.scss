@@ -64,6 +64,10 @@
   }
   &__button {
     display: inline-flex;
+    position: fixed;
+    z-index: 10;
+    top: 10px;
+    right: 15px;
     padding: 0;
     margin: 0;
     border: none;
@@ -71,7 +75,9 @@
     cursor: pointer;
     background-color: transparent;
     transition: fill var(--animation);
-
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
     &:hover,
     &:focus {
       fill: var(--accent-color);
@@ -89,7 +95,7 @@
     display: none;
   }
   &__button.is-open &__button-icon {
-    position: fixed;
+    // position: fixed;
     top: 10px;
     left: 15px;
     z-index: 10;

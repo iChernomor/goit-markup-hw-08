@@ -370,17 +370,36 @@ img {
 .site-nav__list {
   color: var(--primary-text-color);
   font-weight: 500;
-  font-size: 40px;
-  line-height: 1.17;
   letter-spacing: 0.02em;
   text-decoration: none;
 }
 
+@media screen and (max-width: 767px) {
+  .site-nav__list {
+    position: relative;
+    display: block;
+    font-size: 40px;
+    line-height: 1.17;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .site-nav__list {
+    font-size: 14px;
+    line-height: 1.14;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    display: inline-flex;
+    transition: color var(--animation), outline-color var(--animation);
+  }
+}
+
+.site-nav__list:hover, .site-nav__list:focus {
+  color: var(--accent-color);
+  outline-color: var(--accent-color);
+}
+
 .site-nav__textblack {
-  font-weight: 500;
-  font-size: 40px;
-  line-height: 1.17;
-  letter-spacing: 0.02em;
   color: var(--primary-text-color);
 }
 
@@ -388,17 +407,24 @@ img {
   color: var(--accent-color);
 }
 
-.site-nav__linelink::after {
-  position: absolute;
-  left: 0;
-  bottom: -1px;
-  content: "";
-  display: block;
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  transition: color var(--animation);
-  background-color: var(--accent-color);
+@media screen and (min-width: 768px) {
+  .site-nav__linelink::after {
+    position: absolute;
+    margin-bottom: -30px;
+    left: 0;
+    bottom: -1px;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    transition: color var(--animation);
+    background-color: var(--accent-color);
+  }
+}
+
+.site-nav__item {
+  position: relative;
 }
 
 .site-nav__item:hover, .site-nav__item:focus {
@@ -407,6 +433,30 @@ img {
   outline-offset: 0;
   text-decoration: none;
   transition: color var(--animation);
+}
+
+@media screen and (max-width: 767px) {
+  .site-nav__item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .site-nav__item:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .site-nav__box {
+    margin-left: 88px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .site-nav__box {
+    margin-left: 93px;
+  }
 }
 
 .advantage {
@@ -674,33 +724,14 @@ img {
   display: block;
 }
 
-.site-contact {
-  color: var(--secondary-text-color);
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  text-decoration: none;
-}
-
-.site-contact :hover,
-.site-contact :focus {
-  color: var(--accent-color);
-  outline: 0;
-  outline-offset: 0;
-  transition: color var(--animation);
-}
-
 @media screen and (max-width: 767px) {
-  .site-contact :hover,
-  .site-contact :focus {
+  .site-contact {
     margin-bottom: 64px;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .site-contact :hover,
-  .site-contact :focus {
+  .site-contact {
     display: flex;
     flex-direction: column-reverse;
     margin-left: auto;
@@ -708,20 +739,8 @@ img {
 }
 
 @media screen and (min-width: 1200px) {
-  .site-contact :hover,
-  .site-contact :focus {
+  .site-contact {
     flex-direction: row-reverse;
-  }
-}
-
-.site-contact__item {
-  position: relative;
-}
-
-@media screen and (max-width: 767px) {
-  .site-contact__item {
-    display: flex;
-    flex-direction: column-reverse;
   }
 }
 
@@ -731,40 +750,56 @@ img {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1199px) {
   .site-contact__item:not(:last-child) {
-    margin-right: 50px;
+    margin-left: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .site-contact__item:last-child {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 1199px) {
+  .site-contact__item:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1199px) {
+  .site-contact__item {
+    display: flex;
+    align-items: center;
   }
 }
 
 .site-contact__link {
   font-weight: 500;
   letter-spacing: 0.02em;
-  color: var(--secondary-text-color);
-  transition: color var(--animation);
-}
-
-.site-contact__link:hover, .site-contact__link:focus {
-  color: var(--accent-color);
-  transition: color var(--animation);
-}
-
-@media screen and (max-width: 767px) {
-  .site-contact__link {
-    position: relative;
-    display: block;
-    font-size: 40px;
-    line-height: 1.17;
-  }
 }
 
 @media screen and (min-width: 768px) {
   .site-contact__link {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.17;
+    color: #757575;
+    display: flex;
+    align-items: center;
+    transition: color var(--accent-color), outline-color var(--accent-color);
+  }
+  .site-contact__link:hover, .site-contact__link:focus {
+    color: var(--accent-color);
+    outline-color: var(--accent-color);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .site-contact__link {
     font-size: 14px;
     line-height: 1.14;
-    padding-top: 32px;
-    padding-bottom: 32px;
-    transition: color var(--animation), outline-color var(--animation);
   }
 }
 
@@ -774,12 +809,11 @@ img {
     line-height: 1.18;
     letter-spacing: 0.02em;
     color: var(--accent-color);
-    margin-bottom: 10px;
   }
 }
 
 @media screen and (max-width: 767px) {
-  .site-contact--mail {
+  .site-contact__link--mail {
     font-size: 24px;
     line-height: 1.17;
     color: var(--secondary-text-color);
@@ -1098,6 +1132,10 @@ img {
 
 .header-pages__button {
   display: inline-flex;
+  position: fixed;
+  z-index: 10;
+  top: 10px;
+  right: 15px;
   padding: 0;
   margin: 0;
   border: none;
@@ -1105,6 +1143,12 @@ img {
   cursor: pointer;
   background-color: transparent;
   transition: fill var(--animation);
+}
+
+@media screen and (min-width: 768px) {
+  .header-pages__button {
+    display: none;
+  }
 }
 
 .header-pages__button:hover, .header-pages__button:focus {
@@ -1124,7 +1168,6 @@ img {
 }
 
 .header-pages__button.is-open .header-pages__button-icon {
-  position: fixed;
   top: 10px;
   left: 15px;
   z-index: 10;
@@ -1437,7 +1480,9 @@ img {
 }
 
 .network__item {
+  height: 100%;
   position: relative;
+  color: var(--accent-color);
 }
 
 .network__item:not(:last-child) {
@@ -1448,14 +1493,14 @@ img {
   position: absolute;
   content: "";
   right: -10px;
-  bottom: 0;
+  bottom: -10px;
   height: 22px;
   width: 1px;
   display: block;
   background-color: rgba(33, 33, 33, 0.2);
 }
 
-.network__item a:visited {
+.network__link {
   color: var(--accent-color);
 }
 
