@@ -861,15 +861,14 @@ img {
 }
 
 .footer__padding {
-  padding-top: 60px;
   padding-bottom: 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.footer__itemtop {
-  margin-top: 20px;
+.footer__itemtop:not(:last-child) {
+  margin-bottom: 9px;
 }
 
 .footer__link {
@@ -1112,7 +1111,6 @@ img {
 }
 
 .header-pages__logo {
-  padding: 16px 0;
   cursor: pointer;
 }
 

@@ -4,7 +4,7 @@
   display: block;
 
   &__padding {
-    padding-top: 60px;
+    // padding-top: 60px;
     padding-bottom: 60px;
     display: flex;
     flex-direction: column;
@@ -18,7 +18,9 @@
   @media screen and (min-width: 1200px) {
   }
   &__itemtop {
-    margin-top: 20px;
+    &:not(:last-child) {
+      margin-bottom: 9px;
+    }
   }
   &__link {
     font-style: normal;
