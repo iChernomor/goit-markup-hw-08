@@ -678,11 +678,10 @@ img {
 }
 
 .client {
-  list-style: none;
   display: flex;
   flex-wrap: wrap;
-  margin: -15px;
-  flex-direction: row;
+  margin-left: -30px;
+  margin-top: -30px;
 }
 
 .client__h2 {
@@ -696,23 +695,20 @@ img {
 }
 
 .client__list {
-  width: calc((100% / 2) - 30px);
-  /* width: calc(100% / 6 - 30px); */
-  margin: 15px;
+  margin-left: 30px;
+  margin-top: 30px;
+  flex-basis: calc((100% - 4 * 15px) / 2);
 }
 
 @media screen and (min-width: 768px) {
   .client__list {
-    width: calc((100% / 3) - 30px);
-  }
-  .client__list:not(:nth-child(3)) {
-    margin-right: 30px;
+    flex-basis: calc((100% - 6 * 15px) / 3);
   }
 }
 
 @media screen and (min-width: 1200px) {
   .client__list {
-    width: calc((100% / 6) - 30px);
+    flex-basis: calc((100% - 12 * 15px) / 6);
   }
 }
 
