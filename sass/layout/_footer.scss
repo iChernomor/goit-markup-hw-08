@@ -7,15 +7,17 @@
     // padding-top: 60px;
     padding-bottom: 60px;
     display: flex;
-    flex-direction: column;
+
     // justify-content: space-between;
     // flex-wrap: wrap;
     align-items: center;
-  }
-  @media screen and (min-width: 768px) {
-  }
 
-  @media screen and (min-width: 1200px) {
+    @media screen and (max-width: 1199px) {
+      flex-direction: column;
+    }
+
+    @media screen and (min-width: 1200px) {
+    }
   }
   &__itemtop {
     &:not(:last-child) {

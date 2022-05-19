@@ -863,8 +863,13 @@ img {
 .footer__padding {
   padding-bottom: 60px;
   display: flex;
-  flex-direction: column;
   align-items: center;
+}
+
+@media screen and (max-width: 1199px) {
+  .footer__padding {
+    flex-direction: column;
+  }
 }
 
 .footer__itemtop:not(:last-child) {
@@ -1416,7 +1421,6 @@ img {
   .footer-subscribe {
     margin-top: 0;
     margin-right: 0;
-    padding-top: 72px;
   }
 }
 
