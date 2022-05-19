@@ -677,21 +677,28 @@ img {
   overflow: hidden;
 }
 
+.client__h2 {
+  color: var(--primary-text-color);
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.18;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+  .client__h2 {
+    font-size: 36px;
+    line-height: 1.17;
+    margin-bottom: 50px;
+  }
+}
+
 .client {
   display: flex;
   flex-wrap: wrap;
   margin-left: -30px;
   margin-top: -30px;
-}
-
-.client__h2 {
-  color: var(--primary-text-color);
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-  /* margin-top: 188px; */
-  margin-bottom: 50px;
 }
 
 .client__list {
@@ -715,23 +722,18 @@ img {
 .client__link {
   height: 92px;
   display: flex;
-  align-items: center;
   justify-content: center;
-  border: 1px solid currentColor;
+  align-items: center;
+  fill: #afb1b8;
+  border: 1px solid #afb1b8;
   border-radius: 4px;
-  color: #afb1b8;
-  transition: color var(--animation), border-color var(--animation);
+  outline: none;
+  transition: fill var(--animation), border-color var(--animation);
 }
 
 .client__link:hover, .client__link:focus {
-  color: var(--accent-color);
+  fill: var(--accent-color);
   border-color: var(--accent-color);
-}
-
-.client__foto {
-  height: 60px;
-  fill: currentColor;
-  display: block;
 }
 
 @media screen and (max-width: 767px) {
