@@ -863,6 +863,9 @@ img {
 .footer__padding {
   padding-top: 60px;
   padding-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .footer__itemtop {
@@ -902,7 +905,6 @@ img {
 
 .footer__contact--white {
   color: var(--white-color-text);
-  margin-right: 70px;
 }
 
 .footer__contact:hover, .footer__contact:focus {
@@ -921,7 +923,11 @@ img {
 }
 
 .footer__box--logo {
+  display: flex;
   padding-top: 60px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .foto {

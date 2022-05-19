@@ -6,11 +6,11 @@
   &__padding {
     padding-top: 60px;
     padding-bottom: 60px;
-    // display: flex;
-    // flex-direction: column;
+    display: flex;
+    flex-direction: column;
     // justify-content: space-between;
     // flex-wrap: wrap;
-    // align-items: center;
+    align-items: center;
   }
   @media screen and (min-width: 768px) {
   }
@@ -59,7 +59,7 @@
   }
   &__contact--white {
     color: var(--white-color-text);
-    margin-right: 70px;
+    // margin-right: 70px;
   }
   &__contact:hover,
   &__contact:focus {
@@ -83,5 +83,9 @@
   }
 }
 .footer__box--logo {
+  display: flex;
   padding-top: 60px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
