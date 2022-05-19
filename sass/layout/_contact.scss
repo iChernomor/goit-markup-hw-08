@@ -14,6 +14,11 @@
     outline: 0;
     outline-offset: 0;
     transition: color var(--animation);
+
+    @media screen and (max-width: 767px) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
   }
   .site-contact__item + .site-contact__item {
     display: block;
@@ -22,18 +27,86 @@
       margin-left: 50px;
     }
   }
+  &__item {
+    // position: relative;
+    @media screen and (max-width: 767px) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    &:not(:last-child) {
+      @media screen and (max-width: 767px) {
+        margin-bottom: 32px;
+      }
+      @media screen and (min-width: 768px) {
+        margin-right: 50px;
+      }
+    }
+  }
   &__link {
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: #212121;
     // display: flex;
     // align-items: center;
     transition: color var(--animation);
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+      transition: color var(--animation);
+    }
+    &__link--tel {
+      @media screen and (max-width: 767px) {
+        font-size: 34px;
+        line-height: 1.18;
+        letter-spacing: 0.02em;
+        color: var(--accent-color);
+      }
+    }
+    @media screen and (max-width: 767px) {
+      position: relative;
+      display: block;
+      font-size: 40px;
+      line-height: 1.17;
+    }
+
+    @media screen and (min-width: 768px) {
+      font-size: 14px;
+      line-height: 1.14;
+      padding-top: 32px;
+      padding-bottom: 32px;
+      display: inline-flex;
+      transition: color var(--animation), outline-color var(--animation);
+    }
+    &--tel {
+      @media screen and (max-width: 767px) {
+        font-size: 34px;
+        line-height: 1.18;
+        letter-spacing: 0.02em;
+        color: var(--accent-color);
+      }
+    }
   }
-  &__link:hover,
-  &__link:focus {
-    color: var(--accent-color);
-    transition: color var(--animation);
+  &__link--mail {
+    @media screen and (max-width: 767px) {
+      font-size: 24px;
+      line-height: 1.17;
+      color: var(--secondary-text-color);
+    }
   }
+
   &__icon {
     fill: currentColor;
-    margin-right: 10px;
+
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+
+    @media screen and (min-width: 768px) {
+      margin-right: 8px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      margin-right: 10px;
+    }
   }
 }

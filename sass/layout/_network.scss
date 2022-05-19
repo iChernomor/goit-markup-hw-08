@@ -3,18 +3,35 @@
   font-size: 18px;
   line-height: 1.22px;
   letter-spacing: 0.02em;
+  color: var(--accent-color);
   display: flex;
-  //   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
+  // justify-content: center;
+  // align-items: center;
   // padding-top: 64px;
 
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+
   &__item {
-    color: var(--accent-color);
-    border-right: 1px solid rgba(33, 33, 33, 0.2);
+    position: relative;
+
     &:not(:last-child) {
-      margin-right: 10px;
-      margin-left: 10px;
+      margin-right: 20px;
+    }
+    &:not(:last-child)::after {
+      position: absolute;
+      content: "";
+      display: block;
+      right: -10px;
+      bottom: 0;
+      height: 22px;
+      width: 1px;
+      background-color: rgba(33, 33, 33, 0.2);
+    }
+    & a:visited {
+      color: var(--accent-color);
     }
   }
 }

@@ -1,7 +1,7 @@
 .project {
   display: flex;
   justify-content: center;
-  margin-bottom: 50px;
+
   @media screen and (max-width: 767px) {
     display: flex;
     flex-wrap: wrap;
@@ -18,25 +18,27 @@
     margin-bottom: 50px;
   }
 
-  &__hover:hover,
-  &__hover:focus {
-    color: var(--white-color-text);
-    background-color: var(--accent-color);
-    border: none;
-    font-family: "Roboto";
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.62;
-    text-align: center;
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-      0px 2px 2px rgba(0, 0, 0, 0.12);
-    border-radius: 4px;
+  // &__hover:hover,
+  // &__hover:focus {
+  //   color: var(--white-color-text);
+  //   background-color: var(--accent-color);
+  //   border: none;
+  //   font-weight: 500;
+  //   font-size: 16px;
+  //   line-height: 1.62;
+  //   text-align: center;
+  //   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+  //     0px 2px 2px rgba(0, 0, 0, 0.12);
+  //   border-radius: 4px;
+  // }
+  &__item {
+    margin-top: 8px;
+    margin-left: 8px;
   }
 
   &__filter {
     color: var(--primary-text-color);
     background-color: #f5f4fa;
-    font-family: "Roboto";
     border-radius: 4px;
     border: none;
     font-weight: 500;
@@ -48,5 +50,19 @@
     padding: 6px 22px;
     transition: color var(--animation), background-color var(--animation),
       box-shadow var(--animation);
+
+    &:hover,
+    &:focus {
+      color: var(--white-color-text);
+      background-color: var(--accent-color);
+      border: none;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.62;
+      text-align: center;
+      box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+        0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+      border-radius: 4px;
+    }
   }
 }
