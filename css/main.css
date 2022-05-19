@@ -417,6 +417,11 @@ img {
   color: var(--primary-text-color);
 }
 
+.site-nav__textblack:hover, .site-nav__textblack:focus {
+  color: var(--accent-color);
+  outline-color: var(--accent-color);
+}
+
 .site-nav__linelink {
   color: var(--accent-color);
 }
@@ -471,6 +476,12 @@ img {
   .site-nav__box {
     margin-left: 93px;
   }
+}
+
+.site-nav__item:hover,
+.site-nav__item:focus {
+  color: var(--accent-color);
+  outline-color: var(--accent-color);
 }
 
 .advantage {
@@ -1041,10 +1052,11 @@ img {
 @media screen and (min-width: 769px) and (max-width: 768px) {
   .offer {
     padding-top: 118px;
+    padding-bottom: 118px;
   }
 }
 
-@media screen and (min-width: 769px) and (max-width: 768px) and (min-width: 769px) {
+@media screen and (min-width: 769px) and (min-width: 769px) {
   .offer {
     padding-top: 200px;
   }

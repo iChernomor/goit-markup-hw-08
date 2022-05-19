@@ -58,6 +58,11 @@
 
   &__textblack {
     color: var(--primary-text-color);
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+      outline-color: var(--accent-color);
+    }
   }
   &__linelink {
     color: var(--accent-color);
@@ -106,4 +111,9 @@
   @media screen and (min-width: 1200px) {
     margin-left: 93px;
   }
+}
+.site-nav__item:hover,
+.site-nav__item:focus {
+  color: var(--accent-color);
+  outline-color: var(--accent-color);
 }
