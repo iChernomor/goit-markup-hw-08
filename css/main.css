@@ -259,6 +259,7 @@ img {
 
 .form__agreement {
   letter-spacing: 0.03em;
+  font-size: 12px;
   line-height: 1.71;
   display: flex;
   align-items: center;
@@ -292,7 +293,6 @@ img {
   height: 15px;
   border: 2px solid var(--primary-text-color);
   border-radius: 4px;
-  margin-right: 8px;
 }
 
 .form__checkbox:checked + .form__checkicon {
@@ -642,6 +642,10 @@ img {
   color: var(--secondary-text-color);
   font-size: 16px;
   line-height: 1.88;
+}
+
+.card__border {
+  padding: 24px;
 }
 
 .card__overlay {
@@ -1122,13 +1126,8 @@ img {
 
 .header-pages__logo {
   cursor: pointer;
-}
-
-@media screen and (max-width: 479px) {
-  .header-pages__logo {
-    padding-top: 16px;
-    padding-bottom: 16px;
-  }
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
 .header-pages__logo:hover, .header-pages__logo:focus, .header-pages__logo:active {
@@ -1624,13 +1623,14 @@ img {
   font-size: 28px;
   line-height: 1.17;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .team__title {
     font-size: 36px;
     line-height: 1.17;
+    margin-bottom: 50px;
   }
 }
 
