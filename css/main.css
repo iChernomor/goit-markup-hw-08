@@ -1124,10 +1124,15 @@ img {
   justify-content: space-between;
 }
 
-.header-pages__logo {
+.header-pages__logohead {
   cursor: pointer;
-  padding-top: 16px;
-  padding-bottom: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  .header-pages__logohead {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
 }
 
 .header-pages__logo:hover, .header-pages__logo:focus, .header-pages__logo:active {
